@@ -1,4 +1,8 @@
 console.log('Start notes')
 
 console.log(module)
-module.exports.age = 29;
+module.exports.addNotes = () => {
+    console.log('Add note');
+
+    return 'New note'
+}

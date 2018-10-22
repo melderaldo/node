@@ -13,3 +13,7 @@ fs.appendFile('greeting.txt' , `Hello ${user.username}! You are ${notes.age}`, f
         console.log("err");
     }
 });
+
+var result = notes.addNotes();
+
+console.log(result);
