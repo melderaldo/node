@@ -8,16 +8,17 @@ const yargs = require('yargs');
 
 const notes = require('./notes.js');
 
-var command = yargs.argv._[0];
+var argv = yargs.argv;
+var command = argv._[0];
 
 if (command == 'add') {
-    console.log('Add new note');
+    notes.addNote(argv.title, argv.body);
 } else if (command == 'list ') {
-    console.log('List notes')
+    notes.getAll();
 } else if (command == 'delete') {
-    console.log('Delete note')
+    notes.deleteNote(argv.title)
 } else if (command == 'read') {
-    console.log('Read note');
+    notes.getNote(argv.title);
 } else {
-    console.log('Command not reconized');
+    console.log('Command not recgonized');
 }
